@@ -1,7 +1,7 @@
 <template>
   <main class="flex w-full h-screen">
     <div class="w-[65%] h-full">
-      <Editor
+      <!-- <Editor
         class="h-screen"
         api-key="3qch3bp40adh8e8z89h2gbm5hm2zu0v9289qrgbyxh2kysab"
         output-format="html"
@@ -22,7 +22,7 @@
             images_file_types: 'jpg,svg,webp,png,gif',
             file_picker_types: 'image',
         }"
-      />
+      /> -->
     </div>
 
     <aside class="w-[35%] h-screen overflow-y-auto">
@@ -88,7 +88,6 @@
 </template>
 
 <script setup>
-  import Editor from '@tinymce/tinymce-vue'
 
   definePageMeta({
     colorMode: 'light',
