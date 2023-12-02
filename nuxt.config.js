@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   supabase: {
     redirect: false,
   },
+  ssr: false,
   tailwindcss: {
     configPath: 'tailwind.config',
     exposeConfig: false,
