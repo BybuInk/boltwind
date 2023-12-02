@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;700&family=Caveat:wght@400;700&family=Edu+QLD+Beginner:wght@400;700&family=Kablammo&display=swap');
+
+
+.font-cairo{
+    font-family: 'Cairo Play';
+}
+.font-caveat{
+    font-family: 'Caveat';
+}
+.font-edu{
+    font-family: 'Edu QLD Beginner';
+}
+.font-kablammo{
+    font-family: 'Kablammo';
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textGradient{
+    background: linear-gradient(to right, #30CFD0 0%, #c7d954 100%);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* animation: pulsate 1.5s infinite;     */
+}

@@ -1,0 +1,19 @@
+<!-- <vTabs :tabs="tabs" active="preview">
+                <template #content="{ active }">
+                    <template v-if="active == 'preview'">
+                        <div class="p-6 flex items-center justify-center bg-white dark:bg-zinc-900" v-html="comp.content"></div>
+                    </template>
+                    <template v-if="active == 'html'">
+                        <prism-editor 
+                            class="my-editor" 
+                            :highlight="highlighter"
+                            v-model="comp.content"
+                        ></prism-editor>
+                    </template>
+                </template>
+                <template #copyBtn>
+                    <ClientOnly>
+                        <CopyToClipboard :content="comp.content" />
+                    </ClientOnly>
+                </template>
+            </vTabs> -->
