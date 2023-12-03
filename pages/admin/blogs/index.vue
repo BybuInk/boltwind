@@ -178,13 +178,13 @@
                             <td class="h-px w-px whitespace-nowrap">
                                 <div class="block h-full p-6" href="#">
                                     <span class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" v-if="blog.status == 'Publish'">
-                                        <Icon name="material-symbols:check-circle-rounded" class="w-3 h-3" />
+                                        <!-- <Icon name="material-symbols:check-circle-rounded" class="w-3 h-3" /> -->
                                         {{ blog.status }}
                                     </span>
                                     <span 
                                         v-else
                                         class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-gray-200 text-gray-700">
-                                        <Icon name="bi:exclamation-circle" class="w-2.5 h-2.5" />
+                                        <!-- <Icon name="bi:exclamation-circle" class="w-2.5 h-2.5" /> -->
                                         {{ blog.status }}
                                     </span>
                                 </div>
@@ -192,11 +192,11 @@
                             <td class="h-px w-px whitespace-nowrap">
                                 <div class="flex items-start gap-3 h-full p-6" href="#">
                                     <NuxtLink :to="`/admin/blogs/${blog.slug}`" class="inline-flex items-center gap-1 py-0.5 px-2 rounded-full text-xs font-medium hover:bg-zinc-100">
-                                        <Icon name="material-symbols:edit-document-outline-rounded" class="w-3 h-3" />
+                                        <!-- <Icon name="material-symbols:edit-document-outline-rounded" class="w-3 h-3" /> -->
                                         Edit
                                     </NuxtLink>
                                     <button class="inline-flex items-center gap-1 py-0.5 px-2 rounded-full text-xs font-medium bg-red-50 text-red-800" @click="deleteData(blog.id)">
-                                        <Icon name="material-symbols:delete" class="w-3 h-3" />
+                                        <!-- <Icon name="material-symbols:delete" class="w-3 h-3" /> -->
                                         Delete
                                     </button>
                                 </div>
@@ -224,13 +224,13 @@
             <div>
                 <div class="inline-flex gap-x-2">
                     <button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-inner align-middle hover:bg-gray-50">
-                        <Icon name="ic:outline-keyboard-arrow-left" />
+                        <!-- <Icon name="ic:outline-keyboard-arrow-left" /> -->
                         <span class="text-sm">Prev</span>
                     </button>
 
                     <button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-inner align-middle hover:bg-gray-50">
                         <span class="text-sm">Next</span>
-                        <Icon name="ic:outline-keyboard-arrow-right" />
+                        <!-- <Icon name="ic:outline-keyboard-arrow-right" /> -->
                     </button>
                 </div>
             </div>

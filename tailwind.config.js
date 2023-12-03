@@ -1,12 +1,12 @@
 module.exports = {
     darkMode: 'class',
-    content: [
-        `components/**/*.{vue,js,ts}`,
-        `layouts/**/*.vue`,
-        `pages/**/*.vue`,
-        `app.vue`,
-        `plugins/**/*.{js,ts}`,
-        `nuxt.config.{js,ts}`,
+    content: [    
+        "./components/**/*.{js,vue,ts}",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue",
+        "./plugins/**/*.{js,ts}",
+        "./nuxt.config.{js,ts}",
+        "./error.vue",
     ],
     theme: {
         extend: {

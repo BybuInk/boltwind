@@ -52,11 +52,11 @@
             </div>
 
             <!-- Login -->
-            <NuxtLink to="/auth/login" class="flex-center">
+            <!-- <NuxtLink to="/auth/login" class="flex-center">
                 <button class="h-9 w-9 rounded-xl dark:border-zinc-800 dark:hover:bg-zinc-950 border bg-white dark:bg-zinc-900 flex items-center justify-center">
                   <UIcon name="i-heroicons-user" class="dark:text-zinc-200 text-zinc-800 text-xl" />
                 </button>
-            </NuxtLink>
+            </NuxtLink> -->
         </div>
 
         <!-- Search List result -->

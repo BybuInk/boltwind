@@ -18,13 +18,6 @@
                   </div>
                   <div class="text-zinc-400 font-edu text-xl">Innovate, Design, Inspire  | Crafting Stunning Interfaces</div>
                   <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mt-12 buttons-group z-10 px-12">
-                      <!-- <div class="bg-gradient-btn relative group hover:-translate-y-1 transition duration-300 ease-in-out">
-                          <div class="absolute bg-gradient-to-r from-cyan-500 to-yellow-300 -inset-0.5 rounded-lg opacity-30 blur group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                          <a href="https://marketplace.visualstudio.com/items?itemName=Bybuink.boltwind" target="_blank" class="relative bg-zinc-900 text-white px-5 md:py-3.5 py-4 rounded-xl flex gap-3 items-center justify-center hover:-translate-y-1 transition duration-300 ease-in-out">
-                              <Icon name="akar-icons:vscode-fill" class="dark:text-blue-500" />
-                              <span>VSCode Extension</span>
-                          </a>
-                      </div> -->
                         <div class="inline-block bg-gradient-to-tl from-[#C7D954] via-transparent to-[#30CFD0] hover:bg-gradient-to-tr rounded-xl mt-8 py-0.5 px-0.5">
                             <button class="bg-white dark:bg-zinc-900 w-full px-12 py-3 h-full rounded-xl text-zinc-800 dark:text-zinc-100 ">
                                 <a href="https://marketplace.visualstudio.com/items?itemName=Bybuink.boltwind" target="_blank">VSCode Extension</a>
@@ -42,13 +35,13 @@
       <section class="md:hidden grid grid-cols-2 gap-4 px-3 mb-12">
           <NuxtLink to="/docs" class="flex gap-1 items-center w-full bg-zinc-800 rounded-xl p-1">
               <button class="h-9 w-9 rounded-xl border-zinc-800 hover:bg-zinc-950 shadow-lg border bg-zinc-900 flex items-center justify-center">
-                  <Icon name="circum:grid-4-1" class="w-5 h-5 text-zinc-200" />
+                <nuxt-icon name="circum" class="dark:text-zinc-200 text-zinc-800 text-xl" />
               </button>
               <span class="text-[12px] text-zinc-400">Components</span>
           </NuxtLink>
           <NuxtLink to="/gradient/generator" class="flex gap-1 items-center w-full bg-zinc-800 rounded-xl p-1">
               <button class="h-9 w-9 rounded-xl border-zinc-800 hover:bg-zinc-950 shadow-lg border bg-zinc-900 flex items-center justify-center">
-                  <Icon name="mdi-gradient-horizontal" class="w-5 h-5 text-zinc-200" />
+                <nuxt-icon name="gradient" class="dark:text-zinc-200 text-zinc-800 text-xl" />
               </button>
               <span class="text-[12px] text-zinc-400">Gradients</span>
           </NuxtLink>

@@ -51,6 +51,7 @@
 
 <script setup>
   const user = useSupabaseUser()
+  const router = useRouter();
 
   definePageMeta({
     colorMode: 'light',
@@ -88,6 +89,7 @@
       ])
       .select()
     loading.value = false
+    router.navigate('/admin/component')
   }
 
 </script>

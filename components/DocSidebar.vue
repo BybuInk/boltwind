@@ -6,8 +6,8 @@
                 <li class="text-zinc-500 dark:hover:text-zinc-200 cursor-pointer w-full">
                     <NuxtLink to="/docs" class="w-full">
                         <button class="w-full text-left flex items-center gap-2 text-[14px]">
-                            <Icon name="lucide:layout-dashboard" class="" />
-                            Introduction
+                            <IconsLayout class="h-5 w-5" />
+                            All Components
                         </button>
                     </NuxtLink>
                 </li>

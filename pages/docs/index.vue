@@ -1,13 +1,17 @@
 <template>
   <div class="w-full h-full overflow-y-auto p-12">
-    <div class="grid grid-cols-4 gap-6">
-        <div class="w-full rounded-lg relative border border-zinc-700" v-for="category in categories">
-            <img :src="publicUrl+category.image" alt="" class="w-full h-[20vh] object-cover">
+    <div class="grid md:grid-cols-3 gap-6">
+        <NuxtLink 
+          v-for="category in categories"
+          :key="category.id"
+          class="w-full rounded-lg relative border border-zinc-700 overflow-hidden" 
+          :to="`/docs/components/${category.slug}`"
+        >
+            <img :src="`/images/thumb/${category.image}`" :alt="category.title" class="w-full h-[45vh] object-cover">
             <div class="px-4 py-3">
                 <h2 class="text-md text-zinc-300 font-semibold w-full">{{ category.title }}</h2>
-                <p class="text-sm text-zinc-500">02</p>
             </div>
-        </div>
+        </NuxtLink>
     </div>
   </div>
 </template>
@@ -18,11 +22,32 @@
     colorMode: 'dark',
     layout: 'docs'
   })
+
   const supabase = useSupabaseClient()
 
-  const publicUrl = ref('https://ixnljmlklijspeokwrfl.supabase.co/storage/v1/object/public/categories/')
+  let { data: categories } = await supabase.from('categories').select('id, title, slug, image')
 
-  let { data: categories } = await supabase.from('categories').select('title, slug, image')
+  const categoriess = ref([
+    {title: 'Header Section', slug: 'header-section', image: 'header-section.jpg'},
+    {title: 'Banners', slug: 'banners', image: 'banners.jpg'},
+    {title: 'Blog Post Section', slug: 'blog-post-section', image: 'blog-post-section.jpg'},
+    {title: 'Blog Section', slug: 'blog-section', image: 'blog-section.jpg'},
+    {title: 'Careers Section', slug: 'careers-section', image: 'careers-section.jpg'},
+    {title: 'Contact Section', slug: 'contact-section', image: 'contact-section.jpg'},
+    {title: 'CTA Section', slug: 'cta-section', image: 'cta-section.jpg'},
+    {title: 'FAQ Section', slug: 'faq-section', image: 'faq-section.jpg'},
+    {title: 'Features Section', slug: 'features-section', image: 'features-section.jpg'},
+    {title: 'Footers', slug: 'footers', image: 'footers.jpg'},
+    {title: 'Header Navigations', slug: 'header-navigations', image: 'header-navigations.jpg'},
+    {title: 'Metrics Section', slug: 'metrics-section', image: 'metrics-section.jpg'},
+    {title: 'Newsletter Section', slug: 'newsletter-section', image: 'newsletter-section.jpg'},
+    {title: 'News Mentions Section', slug: 'news-mentions-section', image: 'news-mentions-section.jpg'},
+    {title: 'Pricing Section', slug: 'pricing-section', image: 'pricing-section.jpg'},
+    {title: 'Rich Content Section', slug: 'rich-content-section', image: 'rich-content-section.jpg'},
+    {title: 'Social Section', slug: 'social-section', image: 'social-section.jpg'},
+    {title: 'Testimonial Section', slug: 'testimonial-section', image: 'testimonial-section.jpg'},
+    {title: 'Teams Section', slug: 'teams-section', image: 'teams-section.jpg'},
+  ])
 
 </script>
 

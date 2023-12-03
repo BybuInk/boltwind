@@ -6,7 +6,7 @@
           <div class="header flex justify-between items-end">
             <div class="w-full">
               <h2 class="text-2xl font-semibold text-zinc-800 dark:text-zinc-200"># {{comp.title}}</h2>
-              <p class="text-sm text-zinc-700 dark:text-zinc-500" v-if="comp.about">{{ comp.about }}</p>
+              <!-- <p class="text-sm text-zinc-700 dark:text-zinc-500" v-if="comp.about">{{ comp.about }}</p> -->
             </div>
             <div class="w-full hidden items-center gap-1 justify-end">
               <h4 class="text-xs text-zinc-400">By :</h4>
@@ -29,7 +29,7 @@
                   <UIcon name="i-heroicons-code-bracket" class="h-5 w-5 text-zinc-800 dark:text-zinc-600" />
                 </button>
                 <template #panel>
-                  <div class="w-[60vw] max-h-[50vh]">
+                  <div class="w-[60vw] max-h-[50vh] overflow-y-auto">
                     <prism-editor 
                       class="my-editor rounded-lg" 
                       :highlight="highlighter"
@@ -46,7 +46,7 @@
       <div class="fixed left-0 right-0 top-4 flex-center">
         <Transition name="bounce">
           <span v-if="ifCopied" class="text-[14px] bg-zinc-800 px-6 py-2 rounded">
-            Copied
+            <span class="textGradient">Copied</span>
           </span>
         </Transition>
       </div>
@@ -86,17 +86,30 @@
     }, 2000)
   }
   const comps = ref([])
+  const category_id = ref(null)
 
   function highlighter(code) {
     return highlight(code, languages.js);
+  }
+
+  const fetchCategory = async () => {
+    let { data } = await supabase
+      .from('categories')
+      .select('id')
+      .eq('slug', route.params.slug)
+      .single()
+    category_id.value = data
+    fetchData()
   }
   const fetchData = async () => {
     let { data, error } = await supabase
         .from('components')
         .select('*')
+        .eq('category_id', category_id.value.id)
     comps.value = data
+    console.log(data)
   }
-  fetchData()
+  fetchCategory()
 </script>
 
 <style scoped>

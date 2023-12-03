@@ -5,7 +5,6 @@
               class="w-full h-full rounded text-zinc-400"
               @click="emit('fromClass', ''); emit('toClass', ''); emit('viaClass', '');"
           >
-              <Icon name="fe:disabled" class="h-6 w-6" />
           </button>
       </div>
       <div class="w-full h-10 relative rounded bg-white border border-zinc-700">

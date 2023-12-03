@@ -1,17 +1,19 @@
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "@nuxt/ui",
     "dayjs-nuxt",
     "@nuxtjs/supabase",
     "nuxt-icons",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
+    '@nuxt/ui'
   ],
   supabase: {
     redirect: false,
   },
   ssr: false,
+  routeRules: {
+    // '/admin/component': { prerender: true },
+  },
   tailwindcss: {
     configPath: 'tailwind.config',
     exposeConfig: false,
