@@ -1,5 +1,5 @@
 <template>
-    <div class="md:w-[20%] w-full relative hidden md:block">
+    <div class="md:w-[20%] w-full relative hidden lg:block">
         <!-- Components -->
         <div class="dark:bg-zinc-900 bg-white border-r h-full dark:border-zinc-800  overflow-y-auto scrollbar-hide">
             <ul class="space-y-4 border-b dark:border-zinc-800 py-5 mb-5 pl-6">

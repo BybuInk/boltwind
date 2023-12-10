@@ -1,13 +1,13 @@
 <template>
-  <div class="w-full h-full overflow-y-auto p-12">
-    <div class="grid md:grid-cols-3 gap-6">
+  <div class="w-full h-full overflow-y-auto lg:p-12 p-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <NuxtLink 
           v-for="category in categories"
           :key="category.id"
           class="w-full rounded-lg relative border border-zinc-700 overflow-hidden" 
           :to="`/docs/components/${category.slug}`"
         >
-            <img :src="`/images/thumb/${category.image}`" :alt="category.title" class="w-full h-[45vh] object-cover">
+            <img :src="`/images/thumb/${category.image}`" :alt="category.title" class="w-full lg:h-[45vh] object-cover">
             <div class="px-4 py-3">
                 <h2 class="text-md text-zinc-300 font-semibold w-full">{{ category.title }}</h2>
             </div>

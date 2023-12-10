@@ -1,7 +1,8 @@
 <template>
   <nav class="dark:bg-zinc-900 bg-white h-[52px] border-b dark:border-zinc-800 flex justify-between items-center px-3">
         <NuxtLink to="/" class="px-2 flex items-center gap-2">
-            <img src="/images/logo.png" alt="" class="w-9 h-9">
+            <!-- <img src="/images/logo.png" alt="" class="w-9 h-9"> -->
+            <IconsLogo class="w-8 h-8 dark:text-zinc-100 text-zinc-800" />
             <span class="dark:text-zinc-200 text-zinc-800">Boltwind</span>
         </NuxtLink>
 
@@ -33,7 +34,7 @@
         </div>
 
         <div class='flex items-center gap-2'>
-            <!-- <ClientOnly>
+            <ClientOnly>
                 <UButton
                     :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
                     color="gray"
@@ -44,10 +45,10 @@
                 <template #fallback>
                     <div class="w-8 h-8" />
                 </template>
-            </ClientOnly> -->
+            </ClientOnly>
 
             <div class="flex items-center gap-2 text-sm border dark:border-zinc-800 bg-white dark:bg-zinc-900 py-2 px-3 rounded-lg md:w-44 cursor-pointer group" @click="openModal">
-                <UIcon name="i-heroicons-magnifying-glass" class="text-lime-300 group-hover:scale-125 transition duration-300 ease-in-out" />
+                <UIcon name="i-heroicons-magnifying-glass" class="dark:text-lime-300 group-hover:scale-125 transition duration-300 ease-in-out" />
                 <span class="dark:text-zinc-400 text-zinc-600 hidden md:flex">Search...</span>
             </div>
 

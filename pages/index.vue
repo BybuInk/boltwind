@@ -1,7 +1,7 @@
 <template>
 
       <!-- Hero-area -->
-      <section class="h-[80vh] md:h-full overflow-hidden bg-transparent dark:bg-transparent relative  w-full  overflow-x-hidden homeMain magicpattern">
+      <section class="h-[80vh] md:h-full overflow-hidden bg-transparent dark:bg-transparent relative  w-full  overflow-x-hidden homeMain magicpattern hidden">
           <div class="glow-background bg-gradient-to-r from-[#30CFD0] to-[#c7d954] blur-3xl rounded-full shadow-lg shadow-cyan-500/50 w-[25%] h-[80%] absolute opacity-50 -right-32 top-28"></div>
           <div class="glow-background bg-gradient-to-r from-[#30CFD0] to-[#c7d954] blur-3xl rounded-full shadow-lg shadow-cyan-500/50 w-[25%] h-[80%] absolute opacity-50 -left-32 top-28 -z-0"></div>
 
@@ -24,7 +24,9 @@
                             </button>
                         </div>
                         <div class="inline-block bg-gradient-to-tl from-[#C7D954] via-transparent to-[#30CFD0] hover:bg-gradient-to-tr rounded-xl mt-8 py-0.5 px-0.5">
-                            <button class="bg-white dark:bg-zinc-900 w-full px-12 py-3 h-full rounded-xl text-zinc-800 dark:text-zinc-100 ">Get started</button>
+                            <button class="bg-white dark:bg-zinc-900 w-full px-12 py-3 h-full rounded-xl text-zinc-800 dark:text-zinc-100">
+                                <NuxtLink to="/docs">Get started</NuxtLink>
+                            </button>
                         </div>
                   </div>
               </div>
@@ -32,8 +34,8 @@
       </section>
 
       <!-- all products for mobile screen -->
-      <section class="md:hidden grid grid-cols-2 gap-4 px-3 mb-12">
-          <NuxtLink to="/docs" class="flex gap-1 items-center w-full bg-zinc-800 rounded-xl p-1">
+      <section class="md:hidden grid grid-cols-2 gap-4 px-3">
+          <NuxtLink to="/docs" class="flex gap-1 items-center w-full bg-white dark:bg-zinc-800 rounded-xl p-1">
               <button class="h-9 w-9 rounded-xl border-zinc-800 hover:bg-zinc-950 shadow-lg border bg-zinc-900 flex items-center justify-center">
                 <nuxt-icon name="circum" class="dark:text-zinc-200 text-zinc-800 text-xl" />
               </button>
@@ -60,7 +62,7 @@
       </section>
 
       <!-- Reusable Components -->
-      <section class="relative w-full overflow-hidden bg-zinc-900">
+      <section class="relative w-full overflow-hidden bg-white dark:bg-zinc-900">
           <div class="max-w-7xl w-full h-full md:h-[90vh] pb-12 md:pb-0">
               <div class="flex flex-col md:flex-row justify-center items-center gap-12 w-full h-full px-3 md:px-0">
                   <div class="h-full md:w-[50%]">
@@ -68,8 +70,8 @@
                   </div>
                   <div class="md:w-[50%] h-full flex flex-col justify-center items-start">
                       <h5 class="text-sm font-medium text-lime-500">Components</h5>
-                      <h2 class="text-zinc-200 text-4xl mb-6 font-medium">Tailwind Components and <br/> <span class="textGradient">easy to implement</span></h2>
-                      <p class="text-zinc-300 mb-6">Start developing with an open-source library of Tailwind UI components</p>
+                      <h2 class="dark:text-zinc-200 text-zinc-800 text-4xl mb-6 font-medium">Tailwind Components and <br/> <span class="textGradient">easy to implement</span></h2>
+                      <p class="dark:text-zinc-300 text-zinc-600 mb-6">Start developing with an open-source library of Tailwind UI components</p>
                       <div class="flex items-center flex-wrap gap-2 w-[80%]">
                           <span class="text-xs px-3 py-1 rounded-md bg-zinc-800 text-zinc-400">navbar</span>
                           <span class="text-xs px-3 py-1 rounded-md bg-zinc-800 text-zinc-400">testimonial</span>
@@ -94,39 +96,39 @@
       </section>
 
       <!-- VSCode Extension -->
-      <section class="relative w-full overflow-hidden bg-zinc-900">
+      <section class="relative w-full overflow-hidden bg-white dark:bg-zinc-900">
           <div class="max-w-6xl mx-auto md:h-screen h-full flex flex-col md:flex-row justify-center items-center gap-20 px-3 md:px-0 py-12 md:py-0">
               <div class="w-full">
                   <div>
                       <h5 class="text-sm font-medium text-lime-500">Extension</h5>
-                      <h2 class="text-4xl font-medium text-zinc-300">Every Component you need is <span class="textGradient font-bold">ready for production</span></h2>
-                      <p class="text-zinc-400 mt-5">An effortless way to initiate with the tailwind components. With this extension, you can use the required commands as per the commands mention in documentation.</p>
+                      <h2 class="text-4xl font-medium text-zinc-800 dark:text-zinc-300">Every Component you need is <span class="textGradient font-bold">ready for production</span></h2>
+                      <p class="dark:text-zinc-400 text-zinc-500 mt-5">An effortless way to initiate with the tailwind components. With this extension, you can use the required commands as per the commands mention in documentation.</p>
                   </div>
                   <div class="mt-6 space-y-4">
-                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 rounded-xl">
+                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-100 dark:bg-zinc-900 border dark:border-zinc-800 dark:hover:bg-zinc-800 hover:bg-white rounded-xl">
                           <button class="bg-lime-700/10 rounded-xl h-12 w-12 flex-center">
                               <IconsInstall class="text-lime-500 w-6 h-6" />
                           </button>
                           <div class="text-left">
-                              <h3 class="text-lg text-zinc-200">Install</h3>
+                              <h3 class="text-lg dark:text-zinc-200">Install</h3>
                               <p class="text-sm text-zinc-500">Install the VSCode extension from marketplace</p>
                           </div>
                       </div>
-                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 rounded-xl">
+                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-100 dark:bg-zinc-900 border dark:border-zinc-800 dark:hover:bg-zinc-800 hover:bg-white rounded-xl">
                           <button class="bg-lime-700/10 rounded-xl h-12 w-12 flex-center">
                               <IconsSync class="text-lime-500 w-6 h-6" />
                           </button>
                           <div class="text-left">
-                              <h3 class="text-lg text-zinc-200">Realod</h3>
+                              <h3 class="text-lg dark:text-zinc-200">Realod</h3>
                               <p class="text-sm text-zinc-500">Reload VSCodes</p>
                           </div>
                       </div>
-                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 rounded-xl">
+                      <div class="group flex gap-4 w-full items-center px-4 py-4 text-sm bg-zinc-100 dark:bg-zinc-900 border dark:border-zinc-800 dark:hover:bg-zinc-800 hover:bg-white rounded-xl">
                           <button class="bg-lime-700/10 rounded-xl h-12 w-12 flex-center">
                               <IconsMonitor class="text-lime-500 w-6 h-6" />
                           </button>
                           <div class="text-left">
-                              <h3 class="text-lg text-zinc-200">Ready to use</h3>
+                              <h3 class="text-lg dark:text-zinc-200">Ready to use</h3>
                               <p class="text-sm text-zinc-500">Tailwind Components Snippets are ready to use</p>
                           </div>
                       </div>
@@ -141,9 +143,9 @@
       </section>
 
       <!-- Templates -->
-      <section class="md:h-screen overflow-hidden pt-20 bg-zinc-900">
+      <section class="lg:h-screen overflow-hidden pt-20 bg-white dark:bg-zinc-900">
           <header class="text-center">
-              <h2 class="text-3xl font-medium text-zinc-200">Ready to use Templates</h2>
+              <h2 class="text-3xl font-medium dark:text-zinc-200 text-zinc-800">Ready to use Templates</h2>
               <div class="inline-block bg-gradient-to-tl from-[#C7D954] via-transparent to-[#30CFD0] hover:bg-gradient-to-tr rounded-xl mt-8 py-0.5 px-0.5">
                     <button class="bg-white dark:bg-zinc-900 w-full px-12 py-3 h-full rounded-xl text-zinc-800 dark:text-zinc-100 ">Coming Soon</button>
                 </div>
@@ -152,13 +154,13 @@
       </section>
 
       <!-- Footer -->
-      <footer class='p-4 shadow hidden md:flex md:items-center md:justify-between md:p-6 bg-zinc-900 w-full border-t border-zinc-800'>
-          <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-400'>© 2023 <a href='https://boltwind.ink/' class='hover:underline'>Boltwind</a>. All Rights Reserved.</span>
+      <footer class='p-4 shadow hidden md:flex md:items-center md:justify-between md:p-6 bg-white dark:bg-zinc-900 w-full border-t dark:border-zinc-800'>
+          <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-500'>© 2023 <a href='https://boltwind.ink/' class='hover:underline'>Boltwind</a>. All Rights Reserved.</span>
           <div class='flex flex-wrap gap-5 items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
             <div class="w-full flex items-center gap-1 justify-end">
-              <h4 class="text-xs text-zinc-400">Inked By :</h4>
+              <h4 class="text-xs text-zinc-700 dark:text-zinc-400">Inked By :</h4>
               <img src="/images/charlie.png" alt="user-image" class="w-6 h-6 rounded-full object-cover">
-              <a href="https://twitter.com/vimal_bharti" target="_blank" class="text-xs text-zinc-300 hover:underline">Vimal Bharti</a>
+              <a href="https://twitter.com/vimal_bharti" target="_blank" class="text-xs text-zinc-600 dark:text-zinc-300 hover:underline">Vimal Bharti</a>
             </div>
           </div>
       </footer>

@@ -25,10 +25,22 @@
                         </template>
                     </template>
                     <template #copyBtn>
-                        <Button class="text-xs bg-zinc-800 text-white rounded-lg px-4 py-2" @click="deleteData(comp.id)">Delete</Button>
+                        <div class="flex items-center gap-3">
+                            <Button class="text-xs border rounded-lg px-4 py-2" @click="openEditDialog(comp.id)">Edit</Button>
+                            <Button class="text-xs bg-zinc-800 text-white rounded-lg px-4 py-2" @click="deleteData(comp.id)">Delete</Button>
+                        </div>
                     </template>
                 </vTabs>
             </section>
+
+
+            <!-- Edit/Update Component Dialog -->
+            <USlideover v-model="editDialog">
+                <div class="p-4 flex-1" v-if="selectedComp">
+                    <textarea v-model="selectedComp.code" class="w-full p-3 focus:outline-none border rounded-lg" rows="16"></textarea>
+                    <button class="w-full p-3 rounded bg-gray-900 text-white mt-4" @click="updateComponent(selectedComp.id)">Update Code</button>
+                </div>
+            </USlideover>
 
         </div>
     </div>
@@ -52,6 +64,7 @@
 
     const supabase = useSupabaseClient()
     const loading = ref(false)
+    const editDialog = ref(false)
 
     const tabs = ref([
         {
@@ -63,7 +76,8 @@
             value: 'html'
         },
     ])
-
+    
+    const selectedComp = ref(null)
     const comps = ref([])
 
     function highlighter(code) {
@@ -87,6 +101,27 @@
             .eq('id', id)
 
         fetchData()
+    }
+
+    const openEditDialog = async (id) => {
+        let { data } = await supabase
+            .from('components')
+            .select('*')
+            .eq('id', id)
+            .single()
+
+        selectedComp.value = data
+        editDialog.value = true
+    }
+
+    const updateComponent = async (id) => {
+        const { data } = await supabase
+            .from('components')
+            .update({ code: selectedComp.value.code })
+            .eq('id', id)
+        fetchData()
+        editDialog.value = false
+        selectedComp.value = null
     }
 
 </script>

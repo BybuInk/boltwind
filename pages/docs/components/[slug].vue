@@ -1,11 +1,14 @@
 <template>
-  <div class="w-full h-full overflow-y-auto px-20 py-16">
+  <div class="w-full h-full overflow-y-auto lg:px-10 py-6 lg:py-10">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-semibold text-zinc-800 dark:text-zinc-200 capitalize"># {{ route.params.slug }}</h2>
+      </div>
       <section class="max-w-5xl mx-auto space-y-16">
         <div class="component-container relative" v-for="comp in comps" :key="comp">
           <!-- Card-Header -->
           <div class="header flex justify-between items-end">
             <div class="w-full">
-              <h2 class="text-2xl font-semibold text-zinc-800 dark:text-zinc-200"># {{comp.title}}</h2>
+              <!-- <h2 class="text-2xl font-semibold text-zinc-800 dark:text-zinc-200"># {{comp.title}}</h2> -->
               <!-- <p class="text-sm text-zinc-700 dark:text-zinc-500" v-if="comp.about">{{ comp.about }}</p> -->
             </div>
             <div class="w-full hidden items-center gap-1 justify-end">
@@ -17,7 +20,7 @@
 
           <!-- Card-body -->
           <section class="w-full mt-8 bg-white dark:bg-zinc-900 border dark:border-zinc-800 rounded-xl p-3 card">
-            <div class="p-6 flex items-center justify-center bg-white dark:bg-zinc-900" v-html="comp.code"></div>
+            <div class="lg:p-6 flex items-center justify-center bg-white dark:bg-zinc-900" v-html="comp.code"></div>
             <!-- Card-footer -->
             <div class="card-footer flex items-center justify-center space-x-3 relative">
               <ClientOnly>
